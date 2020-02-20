@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+}
+
+.joke {
+  max-width: 800px;
+  padding: 0 10px;
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: 2em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
