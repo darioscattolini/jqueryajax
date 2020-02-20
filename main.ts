@@ -24,14 +24,14 @@ async function fetchJoke(): Promise<string> {
 }
 
 async function displayNewJoke() {
-  const display = <HTMLDivElement>document.querySelector(".joke");
+  const display = $(".joke");
   let content: string;
   await fetchJoke().then(joke => { content = joke; });
-  display.innerHTML = content;
+  display.html(content);
 }
 
-window.onload = () => {
+jQuery(document).ready(() => {
   displayNewJoke();
-  const newJokeButton = <HTMLButtonElement>document.querySelector("#newJoke");
-  newJokeButton.onclick = displayNewJoke;
-}
+  const newJokeButton = $("#newJoke");
+  newJokeButton.on("click", displayNewJoke);
+});
